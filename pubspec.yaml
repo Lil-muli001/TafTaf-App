@@ -1,0 +1,115 @@
+name: taftaf
+description: "TafTaf - Premium Real Estate Platform"
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.12.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+
+  # State Management
+  flutter_riverpod: ^2.6.1
+
+  # Navigation
+  go_router: ^14.6.1
+
+  # UI Components
+  cached_network_image: ^3.4.1
+  image_picker: ^1.1.2
+  carousel_slider: ^5.0.0
+  smooth_page_indicator: ^1.2.0
+  flutter_animate: ^4.5.2
+  shimmer: ^3.0.0
+  google_fonts: ^6.2.1
+
+  # Analytics Charts
+  fl_chart: ^0.70.2
+
+  # SVG rendering (M-Pesa logo)
+  flutter_svg: ^2.0.16
+
+  # Maps & Location
+  google_maps_flutter: ^2.9.0
+  geolocator: ^13.0.1
+  http: ^1.2.2
+  url_launcher: ^6.3.1
+  visibility_detector: ^0.4.0+2
+
+  # Utilities
+  intl: ^0.20.2
+  shared_preferences: ^2.3.5
+  uuid: ^4.5.1
+
+  # Icons
+  font_awesome_flutter: ^10.8.0
+
+  # PDF generation & printing/sharing
+  pdf: ^3.11.0
+  printing: ^5.13.0
+
+  # Voice calling (ZegoCloud – single AAR, no namespace collision with AGP 9.x)
+  zego_express_engine: ^3.14.5
+  permission_handler: ^11.3.1
+
+  # Splash screen
+  flutter_native_splash: ^2.4.3
+
+dependency_overrides:
+  # Force latest patch versions that include the Built-in Kotlin migration,
+  # bypassing parent-package constraints that pin older Android implementations.
+  image_picker_android: '>=0.8.13+19'
+  shared_preferences_android: '>=2.4.25'
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.14.3
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/app launcher logo.png"
+  adaptive_icon_background: "#B71C1C"
+  adaptive_icon_foreground: "assets/images/logo.png"
+  remove_alpha_ios: true
+  web:
+    generate: false
+  windows:
+    generate: false
+
+flutter_native_splash:
+  color: "#0A0A0A"
+  color_dark: "#0A0A0A"
+
+  android_12:
+    color: "#0A0A0A"
+    color_dark: "#0A0A0A"
+
+  fullscreen: true
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/icons/
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Regular.ttf
+        - asset: assets/fonts/Poppins-Italic.ttf
+          style: italic
+        - asset: assets/fonts/Poppins-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Poppins-MediumItalic.ttf
+          weight: 500
+          style: italic
+        - asset: assets/fonts/Poppins-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Poppins-Bold.ttf
+          weight: 700
